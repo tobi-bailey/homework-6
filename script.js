@@ -2,7 +2,7 @@
 function searchCity (weather){ 
     var apiKey = "d89ad78e459b7e68642985f40ec4ca81"
     // key with metrics
-    var queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + weather + "&units=metric&appid=" + apiKey
+    var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + weather + "&units=metric&appid=" + apiKey
     $.ajax({
         url: queryURL,
         method: "GET",
@@ -99,7 +99,7 @@ function searchCity (weather){
 // get UV index
 function getUV(lat, lon){
     var apiKey = "d89ad78e459b7e68642985f40ec4ca81"
-    var uvURL = "http://api.openweathermap.org/data/2.5/uvi/forecast?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey
+    var uvURL = "https://api.openweathermap.org/data/2.5/uvi/forecast?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey
     console.log(uvURL)
     $.ajax({
         url: uvURL,
