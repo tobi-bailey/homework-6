@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet" href="normalize.css"
+    />
+    <link
+      rel="stylesheet" href="skeleton.css"
+      re
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather Dashboard</title>
+  </head>
+
+  <body>
+      <!-- page header -->
+      <header>
+          <h1>Weather Dashboard</h1>
+      </header>
+
+      <!-- start of grid -->
+      <div class="container">
+        <div class="row">
+            <div class="four columns">
+                <label for="searchCity">Search a City</label>
+                <input class="u-full-width" type="search-a-city" placeholder="city name" id="inputCity"></input>
+                <input id="searchCity" type="submit" value="GO!">
+                <!-- <button class="searchCity">Search</button> -->
+                <div class = "recentlySearchedCities"></div>
+            </div>
+            <div class="seven columns">
+                <!-- <div class ="card"> -->
+                    <table class="u-full-width">
+                        <tbody>
+                            <tr>
+                                <td><div class = "cityName"></div></td>
+                                <td><div class = "currentDate"></div></td>
+                                <td><div id="icon"><img id="wicon" src=""></div></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <div class = "temp"></div>
+                    <br>
+                    <div class = "humidity"></div>
+                    <br>
+                    <div class = "wind"></div>
+                    <br>
+                    <div class = "uv"></div>
+                    <p>UV Icon</p>
+        <div class="row"></div>
+                <h3>Five Day Forecast</h3>
+                <div class="two columns">
+                    <div class ="card">
+                        <div id = "date-1"></div>
+                        <div id="icon"><img id="wicon1" src=""></div>
+                        <div id = "temp-1"></div>
+                        <div id = "humidity-1"></div>
+                    </div>
+                </div>
+                <div class="two columns">
+                    <div class ="card">
+                        <div id = "date-2"></div>
+                        <div id="icon-2"><img id="wicon2" src=""></div>
+                        <div id = "temp-2"></div>
+                        <div id = "humidity-2"></div>
+                    </div>
+                </div>
+                <div class="two columns">
+                    <div class ="card">
+                        <div id = "date-3"></div>
+                        <div id="icon-3"><img id="wicon3" src=""></div>
+                        <div id = "temp-3"></div>
+                        <div id = "humidity-3"></div>
+                    </div>
+                </div>
+                <div class="two columns">
+                    <div class ="card">
+                        <div id = "date-4"></div>
+                        <div id="icon-4"><img id="wicon4" src=""></div>
+                        <div id = "temp-4"></div>
+                        <div id = "humidity-4"></div>
+                    </div>
+                </div>
+                <div class="two columns">
+                    <div class ="card">
+                        <div id = "date-5"></div>
+                        <div id="icon-5"><img id="wicon5" src=""></div>
+                        <div id = "temp-5"></div>
+                        <div id = "humidity-5"></div>
+                    </div>
+                </div>
+                <div class="two columns">
+                </div>
+                    <!-- <div class ="card">Day 1</div>
+                    <div class ="card">Day 1</div>
+                    <div class ="card">Day 1</div>
+                    <div class ="card">Day 1</div>
+                    <div class ="card">Day 1</div> -->
+                </div>
+            </div>
+        </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://openweathermap.org"></script>
+    <script src="script.js"></script>
+    
+    </body>
+</html>

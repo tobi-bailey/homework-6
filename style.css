@@ -1,0 +1,85 @@
+h1{
+    width: 100%;
+    padding: 20px;
+    background-color: #044F67;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+body {
+    background: url(cloud-lost-in-the-forest.jpg);
+    background-repeat: no-repeat;
+    background-size: 1500px 1000px;
+    align-content: center;
+  }
+
+  .container{
+      max-width: 100%;
+  }
+
+  @media (min-width: 400px) {
+      .container{
+          width: 100%;
+          align-content: center;
+    .four{
+        margin-left: 50px !important;
+    }
+      }
+  }
+
+
+  .four{
+    background-color: #ECF0F1;
+    opacity: 0.5;
+    padding: 20px;
+    margin-left: 60px !important;
+  }
+
+  .u-full-width{
+      width: 75%;
+      height: 35px;
+  }
+
+  .button{
+      color: #044F67;
+  }
+
+  .seven{
+    background-color: #ECF0F1;
+    opacity: 0.8;
+    padding: 20px;
+  }
+
+  .card{
+    background-color: #ECF0F1;
+    width: 80%;
+    height: 40%;
+    padding: 10px;
+  }
+
+  td{
+      font-size: 30px;
+      font-weight: bold;
+  }
+
+  h3{
+      text-align: center;
+  }
+
+  .card{
+      width: 100% !important;
+      background-color: #044F67;
+      padding: 5px;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      border-radius: 5px;
+      color: white;
+  }
+
+  img{
+      width: 50px;
+  }
+
+  .two{
+      text-align: center;
+  }
