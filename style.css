@@ -1,3 +1,4 @@
+/* Heading */
 h1{
     width: 100%;
     padding: 20px;
@@ -14,6 +15,8 @@ body {
     align-content: center;
   }
 
+  
+/* grid setup */
   .container{
       max-width: 100%;
   }
@@ -22,12 +25,13 @@ body {
       .container{
           width: 100%;
           align-content: center;
-    .four{
-        margin-left: 50px !important;
-    }
       }
-  }
+        .four{
+        margin-left: 50px !important;
+        }
+      }
 
+/* column 1 - search area*/
 
   .four{
     background-color: #ECF0F1;
@@ -36,14 +40,41 @@ body {
     margin-left: 60px !important;
   }
 
+/* search bar */
   .u-full-width{
-      width: 75%;
+      width: 70%;
       height: 35px;
   }
 
-  .button{
-      color: #044F67;
+  /* search button */
+  #searchCity{
+      color: #044F67 !important;
   }
+
+  /* city results buttons */
+  button{
+    width: 90%;
+    align-content: center;
+    background-color: #044F67 !important;
+    color: white;
+  }
+
+  /* a.button{
+    background-color: #044F67 !important;
+    color: white;
+  }
+  
+  a:visited {
+    background-color: #044F67 !important;
+    color: white;
+  }
+  
+  a:active {
+    background-color: #044F67 !important;
+    color: white;
+  } */
+
+  /* column 2 - weather results */
 
   .seven{
     background-color: #ECF0F1;
@@ -51,6 +82,7 @@ body {
     padding: 20px;
   }
 
+  /* results card */
   .card{
     background-color: #ECF0F1;
     width: 80%;
@@ -58,6 +90,15 @@ body {
     padding: 10px;
   }
 
+  .uvIcon{
+      padding: 10px;
+      Width: 40px;
+      border-radius: 5px;
+      /* background-color: purple; */
+      /* color: white !important; */
+  }
+
+  /* table for heading information  */
   td{
       font-size: 30px;
       font-weight: bold;
@@ -67,6 +108,7 @@ body {
       text-align: center;
   }
 
+  /* five day forcast cards */
   .card{
       width: 100% !important;
       background-color: #044F67;
@@ -76,10 +118,12 @@ body {
       color: white;
   }
 
+  /* icon size */
   img{
       width: 50px;
   }
 
+  /* card columns */
   .two{
       text-align: center;
   }

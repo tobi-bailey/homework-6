@@ -25,14 +25,14 @@
       <div class="container">
         <div class="row">
             <div class="four columns">
+                <!-- search city column -->
                 <label for="searchCity">Search a City</label>
                 <input class="u-full-width" type="search-a-city" placeholder="city name" id="inputCity"></input>
-                <input id="searchCity" type="submit" value="GO!">
-                <!-- <button class="searchCity">Search</button> -->
-                <div class = "recentlySearchedCities"></div>
+                <input id="searchCity" type="submit" value="search">
+                <ul id="recentlySearchedCities"><ul>
             </div>
             <div class="seven columns">
-                <!-- <div class ="card"> -->
+                <!-- search results area -->
                     <table class="u-full-width">
                         <tbody>
                             <tr>
@@ -49,9 +49,11 @@
                     <br>
                     <div class = "wind"></div>
                     <br>
-                    <div class = "uv"></div>
-                    <p>UV Icon</p>
+                    <div class ="uv"></div>
+                        <p class="uvIcon"></p>
+                    
         <div class="row"></div>
+        <!-- 5 day forecast -->
                 <h3>Five Day Forecast</h3>
                 <div class="two columns">
                     <div class ="card">
@@ -95,13 +97,8 @@
                 </div>
                 <div class="two columns">
                 </div>
-                    <!-- <div class ="card">Day 1</div>
-                    <div class ="card">Day 1</div>
-                    <div class ="card">Day 1</div>
-                    <div class ="card">Day 1</div>
-                    <div class ="card">Day 1</div> -->
-                </div>
             </div>
+        </div>
         </div>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

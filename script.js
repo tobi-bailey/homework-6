@@ -106,12 +106,28 @@ function getUV(lat, lon){
         method: "GET",
         dataType: "json"
     }).then(function(data){
-        // var unIndex = $(".uv").text(response.)
-        console.log(data);
-    })
+        var uvIndex = $(".uv").text("UV Index: ")
+        var uvNumber = $(".uvIcon").text(data[4].value)
+
+    });
 };
 
-// change UV color
+// change UV index background color (not working)
+function changeUVColor(uvNumber){
+    var uvIcon = uvNumber.toFixed(0)
+    if (uvIcon >= 3){
+        uvIcon.css('background-color', 'green');
+    }
+    else if (uvIcon >= 6){
+        uvIcon.setAttribute('style', 'background-color: yellow !important');
+    }
+    else if (uvIcon >= 8){
+        uvIcon.setAttribute('style', 'background-color: orange !important');
+        }
+    else {
+        $(uvIcon).css('background-color', 'red');
+    };
+}
 
 // save to local storage
 window.onload = function(){
@@ -120,107 +136,34 @@ window.onload = function(){
     inputCity.value =  localStorage.getItem("City Name"); 
   }
 
-// append 
-$("#searchCity").on("click", function(event) {
-   event.preventDefault();
-   var inputCity = $("#inputCity").val().trim();
-   localStorage.setItem("City Name", inputCity);  
-    $(".recentlySearchedCities").append(inputCity);
-   searchCity(inputCity);
-   console.log(inputCity)
+
+// append city to list
+   $("#searchCity").on("click", function(event) {
+    event.preventDefault();
+    var inputCity = $("#inputCity").val().trim();
+    localStorage.setItem("City Name", inputCity);
+    var node = document.createElement("button");
+    var textnode = document.createTextNode(inputCity);
+    node.appendChild(textnode);
+    document.getElementById("recentlySearchedCities").appendChild(node);
+    searchCity(inputCity);
    });
-
-
-// create click function for button and call search city function 
-// $("#recentlySearchedCities  or buttons").on("click", "button", function(event) {
-//     event.preventDefault();
-//     var previousCity = $("#button"); 
-//      $(".recentlySearchedCities").append(inputCity);
-//     searchCity(inputCity);
-//     console.log(inputCity)
-//     });
-
-
-
-// use THIS because we have multiple buttons with same class 
-
-
-
-
-
-
-
-
-
-
-
-
-   // // save city in local storage
-// window.onload = function(){
-//     inputCity.value =  localStorage.getItem("City Name"); 
-//   }
   
-  // pull from local storage
-//   $(".u-full-width").click(function(event){
-//       event.preventDefault();
-//       localStorage.setItem("City Name", inputCity);  
-//       inputCity.value = $(".recentlySearchedCities").val();
-//   });
-   
+
+// create click function for button and call search city function (not working)
+$(this).on("click", "button", function(event) {
+    event.preventDefault();
+    var previousCity = $("button"); 
+    //  $(this).append(inputCity);
+    searchCity(inputCity);
+    console.log(inputCity)
+    });
 
 
 
-   
-//   window.onload = function(){
-
-//     var $saveButtons = $('.saveBtn'); 
-//     var calendarInput = $(".calendarInput")[0];  
-//     calendarInput.value =  localStorage.getItem("calendarInput"); 
-//   }
-  
-  // pull from local storage
-//   $(".saveBtn").click(function(event){
-//       event.preventDefault();
-//       var calendarInput = $(".calendarInput").val();
-//       localStorage.setItem("calendarInput", calendarInput);  
-//       calendarInput.value = $(".calendarInput").val();
-//   });
-
-        // current date
-        // function timeConverter(){
-        //     var a = new Date(response.list[0].dt_txt * 1000);
-        //     var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-        //     var year = a.getFullYear();
-        //     var month = months[a.getMonth()];
-        //     var date = a.getDate();
-        //     var hour = a.getHours();
-        //     var time = date + '/' + month + '/' + year;
-            
-        //   }
-        //   var currentDate = $(".currentDate").text(time); 
 
 
-// var currentDate = $(".currentDate").text(time);
-
-    
-//on click function for inputted city 
-// $("#searchCity").on("click", function(event) {
-//  // Preventing the button from trying to submit the form
-// event.preventDefault();
-// searchCity(inputCity);
-// });
-// console.log(inputCity)
 
 
-// // save city in local storage
-// window.onload = function(){
-//     inputCity.value =  localStorage.getItem("City Name"); 
-//   }
-  
-//   // pull from local storage
-//   $(".u-full-width").click(function(event){
-//       event.preventDefault();
-//       localStorage.setItem("City Name", inputCity);  
-//       inputCity.value = $(".recentlySearchedCities").val();
-//   });
-  
+
+
